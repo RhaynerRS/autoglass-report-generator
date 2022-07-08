@@ -18,19 +18,20 @@
   margin-right: 5px;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
+.navText{margin-bottom: 0 !important;}
 #navbar {
     z-index: 100;
   position: fixed;
   font-size: 18px;
   width: 100%;
-  height: 4rem;
-  background-color: #164194;
+  height: 72px;
+  background-color: #003da5;
   color: #fff;
   display: flex;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0px 0px 40px 0px rgb(82 63 105 / 10%);
 }
 #navItems {
   display: flex;

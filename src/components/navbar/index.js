@@ -1,6 +1,7 @@
 import './index.css';
 import { faBars, faClock, faClipboard, faNewspaper, faCircleCheck, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {IcBars,IcClock,IcClipboard} from '../icons/index'
 
 export function NavBar(props) {
     console.log(props)
@@ -8,7 +9,7 @@ export function NavBar(props) {
         <div id="report">
             <div id="navbar">
                 <div class="item" id="navItems" >
-                    <FontAwesomeIcon icon={faBars}/>
+                    <IcBars />
                     <p class="navText">GERA-EXCELL</p>
                 </div>
                 <div id="navItems">

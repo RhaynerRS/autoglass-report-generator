@@ -1,0 +1,10 @@
+.test-container{
+    margin-block:1rem;
+}
+
+code, kbd, samp {
+    font-size: 1em !important;
+}
+code {
+    padding: 1em !important;
+}
