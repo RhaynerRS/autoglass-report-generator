@@ -1,18 +1,8 @@
 body {
   margin: 0 !important;
   padding: 0!important;
-  font-family: "Roboto", sans-serif;
-  background-color: #EAF1F7 !important;
-}
-p{margin-bottom: 0 !important;}
-.details {
-  padding-top: calc(var(--navbar-height-short) + 24px);
-}
 
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: calc(var(--grid-gutter-width) / 2);
-  padding-right: calc(var(--grid-gutter-width) / 2);
-  width: var(--container-lg);
+}
+.details {
+  padding-top: calc(var(--navbar-height-short) + 24px) !important;;
 }
