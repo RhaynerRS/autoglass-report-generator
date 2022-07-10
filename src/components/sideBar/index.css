@@ -1,0 +1,73 @@
+.sidebar:not(.collapsed) {
+   
+    width: 265px;
+    left: 0;
+    background-color: #fff;
+    bottom: 0;
+    box-shadow: 0 0 28px 0 rgb(82 63 105 / 13%);
+    position: fixed;
+    top: 0;
+
+}
+
+.sidebar{
+    width: 0px;
+    left: 0;
+    transition: right .3s ease;
+    transition: width .3s ease;
+    z-index: 100;
+}
+.bars-menu:not(.opened){
+    transform: rotate(-180deg);
+    transition: 0.2s;
+    z-index: 101;
+    position:absolute;
+    left: 30px;
+    top: 24px;
+    animation: open_menu .3s forwards;
+}
+.bars-menu{
+    position:absolute;
+    left: 30px;
+    top: 23px;
+    cursor: pointer;
+}
+.bars-menu:not(.opened) svg path{
+    fill:#003da5;
+    animation: open_bars .3s forwards;
+}
+.bars-menu svg path{
+    fill:white;
+    animation: close_bars .3s forwards;
+}
+
+.opened:not(.no_animate){
+    transform: rotate(0deg);
+    animation: close_menu .3s forwards;
+}
+.opened svg path{
+    fill:white;
+}
+
+@keyframes open_menu {
+    0%   {left: 30px;}
+    25%  {left: 30px;}
+    100% {left: 211px;}
+}
+@keyframes close_menu {
+    0%   {left: 211px;}
+    75%  {left: 30px;}
+    99% {left: 30px;}
+    100% {left: 30px;}
+}
+
+@keyframes open_bars {
+    0%   {fill:white;}
+    25%  {fill:white;}
+    100% {fill:#003da5;}
+}
+@keyframes close_bars {
+    0%   {fill:#003da5;}
+    75%  {fill:white;}
+    100% {fill:white;}
+}

@@ -2,9 +2,22 @@
     margin-block:1rem;
 }
 
-code, kbd, samp {
-    font-size: 1em !important;
+pre code {
+    display: block;
+    font-size: 1em;
+    padding: 1em;
+    background: none;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    max-width: 100%;
+    min-width: 100px;
+    padding: 0;
+    color:#e83e8c !important;
 }
-code {
-    padding: 1em !important;
+
+pre{
+    background-color: #ebedf3;
+    padding:1rem;
+    border-radius: 0.42rem;
 }

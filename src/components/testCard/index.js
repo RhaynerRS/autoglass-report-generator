@@ -1,5 +1,6 @@
 import './index.css';
 import Accordion from 'react-bootstrap/Accordion'
+import { TestContext } from '../context';
 
 export function TestCard(props) {
     return (
@@ -8,7 +9,8 @@ export function TestCard(props) {
                 <Accordion.Item eventKey={props.data.uuid}>
                     <Accordion.Header>{props.data.title}</Accordion.Header>
                     <Accordion.Body>
-                        <code>{props.data.code}</code>
+                        <pre><code>{props.data.code}</code></pre>
+                        <TestContext context={props.data.context} />
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
