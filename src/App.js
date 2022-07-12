@@ -10,11 +10,9 @@ import { SideBar } from './components/sideBar';
 function App() {
 
   const [isActive, setIsActive] = useState(false);
-  const [isAnimated,setIsAnimated]=useState(false);
 
 function openMenu() {
   setIsActive(current => !current);
-  setIsAnimated(true)
 }
   let data = require('./full_report.json')
   let suites=[]
@@ -37,7 +35,7 @@ function openMenu() {
         {suites.map(suite=>{return <Card data={suite}/>})}
       </div>
       <footer class="footer-report"><div class="container"><p>©2022 Autoglass Report Generator</p></div></footer>
-      <SideBar active={isActive}  menu={openMenu} animated={isAnimated}/>
+      <SideBar active={isActive}  menu={openMenu} data={suites}/>
     </>
   );
 }

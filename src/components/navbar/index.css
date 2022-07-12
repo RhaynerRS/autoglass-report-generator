@@ -56,9 +56,6 @@
 .navText{
     margin-left: 5px;
 }
-.title{
-  margin-left: 30px;
-}
 .bars{
   transform: rotate(-180deg);
   transition: 0.2s;

@@ -11,7 +11,7 @@ export function NavBar(props) {
             <div id="navbar">
                 <div class="item" id="navItems" >
                     <i onClick={props.menu} id="bars" class={props.active ? "opened bars" : "bars"} ></i>
-                    <p class="navText title">GERA-EXCELL</p>
+                    <p class="navText" style={props.active?{marginLeft:265}:{marginLeft:72}}>GERA-EXCELL</p>
                 </div>
                 <div id="navItems">
                     <div class="item" title="Duração">
