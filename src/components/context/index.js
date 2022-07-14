@@ -11,7 +11,6 @@ function isString(value) {
 }
 
 export function TestContext(props) {
-    console.log(props)
     let ctx = JSON.parse(props.context)
     function renderImage(ctx, title) {
         const isUrl = urlRegEx.test(ctx);

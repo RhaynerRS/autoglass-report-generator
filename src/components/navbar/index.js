@@ -26,15 +26,15 @@ export function NavBar(props) {
                         <FontAwesomeIcon icon={faClipboard} />
                         <p class="navText">{props.data.suites}</p>
                     </div>
-                    <div class="item" title="Sucessos">
+                    <div class="item" title="Sucessos" onClick={()=>props.state("passed")}>
                         <FontAwesomeIcon icon={faCircleCheck} />
                         <p class="navText">{props.data.passes}</p>
                     </div>
-                    <div class="item" title="Falhas">
+                    <div class="item" title="Falhas" onClick={()=>props.state("failed")}>
                         <FontAwesomeIcon icon={faCircleXmark} />
                         <p class="navText">{props.data.failures}</p>
                     </div>
-                    {props.data.skipped > 0 ? <div class="item" title="Não Executados">
+                    {props.data.skipped > 0 ? <div class="item" title="Não Executados" onClick={()=>props.state("skipped")}>
                         <FontAwesomeIcon icon={faCircleStop} />
                         <p class="navText">{props.data.skipped}</p>
                     </div> : ""}

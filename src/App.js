@@ -8,23 +8,30 @@ import { SideBar } from './components/sideBar';
 
 
 function App() {
-
+  const [status, setStatus] = useState(null)
   const [isActive, setIsActive] = useState(false);
 
-function openMenu() {
-  setIsActive(current => !current);
-}
+  function openMenu() {
+    setIsActive(current => !current);
+  }
   let data = require('./full_report.json')
-  let suites=[]
-  data.results.map(result=>result.suites.map(suite=>suites.push(suite)))
+  let suites = []
+  data.results.map(result => result.suites.map(suite => suites.push(suite)))
+
+  function setState(state){
+    if (state==status){
+      setStatus(null)
+    }else{
+      setStatus(state)
+    }
+  }
   return (
     <>
-      <NavBar data={data.stats} menu={openMenu} active={isActive}/>
+      <NavBar data={data.stats} menu={openMenu} active={isActive} state={setState}/>
       <div id="details" class="details container">
       <div class="card card-custom gutter-b">
             <div class="card-body d-flex align-items-center py-5 py-lg-10">
                 <div class="d-flex flex-center position-relative ml-5 mr-15 ml-lg-9 mr-lg-15">
-
                 </div>
                 <div class="m-0 text-dark-50 font-weight-bold font-size-lg">O Design System utiliza o componente de 
                 <code>Card do Bootstrap</code>para criar accordions. 
@@ -32,7 +39,7 @@ function openMenu() {
                 <a class="font-weight-bold" href="https://getbootstrap.com/docs/4.6/components/collapse/#accordion-example" target="_blank">Documentação</a>.</div>
             </div>
         </div>
-        {suites.map(suite=>{return <Card data={suite}/>})}
+        {suites.map(suite=>{return <Card status={status} data={suite}/>})}
       </div>
       <footer class="footer-report"><div class="container"><p>©2022 Autoglass Report Generator</p></div></footer>
       <SideBar active={isActive}  menu={openMenu} data={suites}/>

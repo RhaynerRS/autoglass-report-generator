@@ -10,7 +10,7 @@ export function Card(props) {
                     <p class="font-size-h3 titulo-card">{props.data.title}</p>
                 </Accordion.Header>
                 <Accordion.Body class="suite-body">
-                    {props.data.tests.map(test => { return <TestCard data={test} /> })}
+                    {props.data.tests.map(test => { return props.status!==null?(test.state==props.status?<TestCard data={test} />:null):<TestCard data={test} />})}
                 </Accordion.Body>
             </Accordion.Item>
         </Accordion>

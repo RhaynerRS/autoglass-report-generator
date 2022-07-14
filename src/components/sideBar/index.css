@@ -1,46 +1,65 @@
 .sidebar:not(.collapsed) {
-    width: 265px;
-    left: 0;
-    background-color: #fff;
-    bottom: 0;
-    box-shadow: 0 0 28px 0 rgb(82 63 105 / 13%);
-    position: fixed;
-    top: 0;
+  width: 265px;
+  left: 0;
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0 0 28px 0 rgb(82 63 105 / 13%);
+  position: fixed;
+  top: 0;
 }
-.sidebar{
-    width: 70px;
-    left: 0;
-    transition: all 0s !important;
-    z-index: 100;
+.sidebar {
+  width: 70px;
+  left: 0;
+  transition: all 0s !important;
+  z-index: 100;
 }
-.bars-menu:not(.opened){
-    transform: rotate(180deg);
-    z-index: 101;
-    position:absolute;
+.sidebar ::-webkit-scrollbar {
+  width: 4px;
 }
-.bars-menu{
-    cursor: pointer;
-    transition: 0.2s;
-    padding-block: .55rem;
+
+/* Track */
+::-webkit-scrollbar-track {
 }
-.bars-menu svg:hover path{
-    fill:#003da5;
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e4e6ef;
+  border-radius: 0.42rem;
+  width: 2px;
 }
-.bars svg g{
-    line-height: 1.5;
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e0e2f0;
 }
-.bars-menu svg path{
-    fill:#b5b5c3;
-    transition: all 0.15s ease;
+.bars-menu:not(.opened) {
+  transform: rotate(180deg);
+  z-index: 101;
+  position: absolute;
 }
-.opened{
-    margin-right: .35rem;
+.bars-menu {
+  cursor: pointer;
+  transition: 0.2s;
+  padding-block: 0.55rem;
 }
-.kt-brand{
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    height: 72px;
-    padding-inline:25px;
-    justify-content: space-between;
+.bars-menu svg:hover path {
+  fill: #003da5;
+}
+.bars svg g {
+  line-height: 1.5;
+}
+.bars-menu svg path {
+  fill: #b5b5c3;
+  transition: all 0.15s ease;
+}
+.opened {
+  margin-right: 0.35rem;
+}
+.kt-brand {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 72px;
+  padding-inline: 25px;
+  justify-content: space-between;
 }

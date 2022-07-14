@@ -1,0 +1,6 @@
+.error svg g [fill]{
+    fill: #E63C2F !important;
+}
+.check svg g [fill]{
+    fill: #4CAF50 !important;
+}
