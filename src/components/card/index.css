@@ -56,3 +56,30 @@
 .titulo-card{
     margin-block: 1rem;
 }
+
+.cardInfos {
+    display:flex;
+}
+
+.cardItem:first-of-type{
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+}
+
+.cardItem{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    color: #b5b5c3;
+}
+
+.cardItem:hover{
+    color: #b5b5c3;
+}
+
+.cardText{
+    font-size: 14px;
+    margin-bottom: 0 !important;
+    margin-left: 5px;
+}

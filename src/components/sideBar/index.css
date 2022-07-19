@@ -63,3 +63,11 @@
   padding-inline: 25px;
   justify-content: space-between;
 }
+
+.menu-item:hover a{
+  color:#b5b5c3 !important;
+}
+
+.menu-item>.menu-heading, .aside-menu .menu-nav .menu-item>.menu-link{
+  align-items: center !important;
+}

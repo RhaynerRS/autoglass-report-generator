@@ -11,7 +11,7 @@ export function NavBar(props) {
             <div id="navbar">
                 <div class="item" id="navItems" >
                     <i onClick={props.menu} id="bars" class={props.active ? "opened bars" : "bars"} ></i>
-                    <p class="navText" style={props.active?{marginLeft:265}:{marginLeft:72}}>GERA-EXCELL</p>
+                    <p class="navText" style={props.active?{marginLeft:265}:{marginLeft:72}}>e2e-cypress</p>
                 </div>
                 <div id="navItems">
                     <div class="item" title="Duração">
@@ -26,15 +26,15 @@ export function NavBar(props) {
                         <FontAwesomeIcon icon={faClipboard} />
                         <p class="navText">{props.data.suites}</p>
                     </div>
-                    <div class="item" title="Sucessos" onClick={()=>props.state("passed")}>
+                    <div class="stateItem item" title="Sucessos" onClick={()=>props.state("passed")}>
                         <FontAwesomeIcon icon={faCircleCheck} />
                         <p class="navText">{props.data.passes}</p>
                     </div>
-                    <div class="item" title="Falhas" onClick={()=>props.state("failed")}>
+                    <div class="stateItem item" title="Falhas" onClick={()=>props.state("failed")}>
                         <FontAwesomeIcon icon={faCircleXmark} />
                         <p class="navText">{props.data.failures}</p>
                     </div>
-                    {props.data.skipped > 0 ? <div class="item" title="Não Executados" onClick={()=>props.state("skipped")}>
+                    {props.data.skipped > 0 ? <div class="stateItem item" title="Não Executados" onClick={()=>props.state("skipped")}>
                         <FontAwesomeIcon icon={faCircleStop} />
                         <p class="navText">{props.data.skipped}</p>
                     </div> : ""}

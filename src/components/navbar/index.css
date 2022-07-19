@@ -46,12 +46,14 @@
 .menu:hover {
   opacity: 1;
 }
-.item {
+.stateItem {
+  cursor: pointer;
+}
+.item{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-inline: 10px;
-  cursor: pointer;
 }
 .navText{
     margin-left: 5px;
